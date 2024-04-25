@@ -1,27 +1,78 @@
-# BaseTest
+# Bienvenido 🐝
+  - Esta es una evaluación sencilla para desarrollo en Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.5.
+## 1 Aplicación
+  - La estructura del proyecto debe quedar de la siguiente manera
+  
+    ````
+      src
+      ├─ app
+      |   ├─ home
+      |   |    ├─ components
+      |   |    |    ├─ component[n].ts
+      |   |    |    └─ component[n].html
+      |   |    ├─ home.ts
+      |   |    └─ home.html
+      |   ├─ core
+      |   |    ├─ services
+      |   |    |     └─ service[n].ts
+      |   |    └─ interfaces
+      |   |         └─ interface[n].ts
+      |   ├─ shared
+      |   |     └─ component-shared[n]
+      |   |         ├─ component-shared[n].ts
+      |   |         └─ component-shared[n].html               
+      |   |
+      |   ├─ app-component.ts
+      |   └─ app-component.html
+      ├─ assets
+      |     ├─ images
+      |     ├─ sass
+      |     |   ├─ abstracts
+      |     |   ├─ base
+      |     |   ├─ components
+      |     |   |    └─ component[n].scss
+      |     |   ├─ pages
+      |     |   ├─ themes
+      |     |   └─ vendors
+      |     └─ main.scss
+      |
+      ├─ environments
+      |     ├─ environment.prod.ts
+      |     ├─ environment.qa.ts
+      |     └─ environment.ts
+      └─ REST 
 
-## Development server
+### Indicaciones
+  ## 1 Base
+  - Se debe construir una aplicación en base a la api <a href="https://rickandmortyapi.com/">rick&mortyAPI</a>.
+  - De utilizar alguna librería de estilos, se recomienda <a href="https://primeng.org/">prime-ng</a>
+  - Se espera de esta: 
+     - que contenga un layout (`<header><section><footer>`)
+     - que despliegue la colección proporcionada por el endpoint.
+     - que permita visualizar la información individual de cada elemento (una vista detalle)
+     - de existir posibles nuevas secciones para visualización, que se pueda acceder a ellas por medio del `<header>`
+     
+## 2 Ejercicios
+  - Con los datos obtenidos de la API organizar colecciones (characters) según siguientes criterios (idealmente de forma dinámica por medio de input):
+    - status
+    - species
+    - origin
+  - Con los datos obtenidos de la API, organizar las colecciones (locations) sergún los siguientes criterios:
+    - name
+    - type
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+  - Frente al siguiente fragmento, ¿qué puede decir? 
+    (No estamos esperando una respuesta específica, puede comentar todo lo que pueda observar, corregir, etc.)
+    ````
+    const arry: number[] = [1, 2, 3, 7];
+    var multiply: number = 3
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+    function multiplyMe(arr: number[]): number[]{
+      for(let i = 0; i < arr.length; i++){
+        arr[i] = arr[i] * multiply;
+      }
+    }
+  >RESPUESTA  
+  --> 
+  

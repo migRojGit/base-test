@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
@@ -8,6 +10,6 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent{
   title = 'base-test';
 }
