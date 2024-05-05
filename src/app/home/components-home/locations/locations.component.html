@@ -1,0 +1,37 @@
+
+<body>
+<input type="number" [(ngModel)]="locationId" pInputText class="p-inputtext">
+<button pButton label="Buscar" (click)="getLocation(locationId)" class="p-button p-button-raised p-button-raised">Buscar</button>
+<button pButton label="Limpiar" (click)="clearSearch()" class="p-button p-button-raised p-button-secondary">Limpiar</button>
+
+
+
+<p-table [value]="filteredChar" [paginator]="true" [rows]="10" [rowsPerPageOptions]="[5,10,20]" [scrollable]="true" scrollHeight="500px"
+    [style]="{ 'width': '80%;'}" [sortMode]="'multiple'" (sortChange)="onSort($event)">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>
+          Tipo
+          <p-sortIcon field="type"></p-sortIcon>
+          <input type="text" [(ngModel)]="selectedPlanet" placeholder="Tipo" (input)="filterTableData($event)">
+        </th>
+        <th>
+          Dimension
+          <p-sortIcon field="dimension"></p-sortIcon>
+          <input type="text" [(ngModel)]="selectedDimension" placeholder="Dimension" (input)="filterTableData($event)">
+        </th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-chara>
+      <tr>
+        <td>{{ chara.id }}</td>
+        <td>{{ chara.name }}</td>
+        <td>{{ chara.type }}</td>
+        <td>{{ chara.dimension }}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+
+</body>

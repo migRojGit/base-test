@@ -75,4 +75,22 @@
     }
   >RESPUESTA  
   --> 
+  'Primero que nada, se distingue que la funcion multiplyMe no devuelve ningún valor,
+  Si bien multiplica los valores dentro del array que espera, este se limpia una vez termina la función 
+  por lo que debería llevar una variable adicional donde se guarden los resultados esperados para luego
+  retornar ese valor. 
+  
+  Segundo al ser un valor constante, el 3, la variable multiply debería ser de tipo const o let, ya que es 
+  un valor constante que no va a cambiar dentro del código, esto permite que sea mejor al momento de leer el código
+  para el usuario y para algunos motores de javascript usan menos recursos indicando que es un const en vez de un
+  var, ya que el var puede cambiar su valor dentro.
+  
+  Y tercero, esta función sólo ocupará el valor de 3 de la variable 'Multiply', por lo que no es una función optimizada
+  o que pueda ser reutilizada, por lo que recomiendo que en vez de que la variable 'Multiply' esté dentro de la función,
+  sea cambiada por un parámetro de entrada de la función, de este modo puede ser utilizada nuevamente con otro array y con 
+  otros número a multiplicar. Si la función MultiplyMe recibe 2 parametros de entrada, que serían el array[] de numeros y 
+  el índice de multiplicación de la misma.'
+
+
+  
   
