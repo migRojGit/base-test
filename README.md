@@ -1,5 +1,3 @@
-# En revisión !!
-
 # Bienvenido 🐝
   - Esta es una evaluación sencilla para desarrollo en Angular
 
@@ -76,7 +74,5 @@
       }
     }
   >RESPUESTA  
-  La variable arry de tipo number[] nunca es utilizada.
-  Se recomienda cambiar el tipo de multiply de var a const si es que no se va a re asignar el valor de la variable en ningún momento.
-  La funcion multiplyMe NO retorna ningún valor y se espera que devuelva un valor de tipo number[], debería corregirse.
+  --> 
   
