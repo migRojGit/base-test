@@ -14,7 +14,7 @@ RUN npm run build -- --output-path=./dist/out --output-hashing=all --configurati
 
 FROM nginx:1.21.3-alpine
 
-COPY --from=build-stage /app/dist/out /usr/share/nginx/html
+COPY --from=build-stage /app/dist/out/ /usr/share/nginx/html
 
 COPY ./nginx.conf /etc/nginx/conf.d/default.conf
 
